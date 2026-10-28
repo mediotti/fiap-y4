@@ -2,6 +2,8 @@
 
 **Projeto escolhido: opção 6 — Assistente de análise de documentos.**
 
+**Integrante:** Gabriel Mediotti Marques — **RM:** 552632.
+
 O **Lume** é um MVP acadêmico que consulta relatórios, artigos, manuais e outros materiais, fundamentando as respostas no conteúdo analisado. A aplicação permite:
 
 - Importar documentos PDF, TXT e Markdown.
