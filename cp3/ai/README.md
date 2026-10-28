@@ -1,8 +1,15 @@
 # Lume · Assistente de documentos
 
-MVP acadêmico para consultar materiais extensos com fontes, gerar resumos em etapas e encaminhar tarefas a modelos diferentes pelo **OpenRouter**. Interface em português, upload de PDF/TXT/Markdown, SQLite local e exportação em Markdown.
+**Projeto escolhido: opção 6 — Assistente de análise de documentos.**
 
-**Público:** estudantes e equipes acadêmicas que precisam localizar regras, comparar perspectivas e revisar materiais de pesquisa. **Objetivo:** apoiar a leitura crítica com evidências verificáveis, preservando a responsabilidade humana pela interpretação. A proposta corresponde à opção 6 do enunciado.
+O **Lume** é um MVP acadêmico que consulta relatórios, artigos, manuais e outros materiais, fundamentando as respostas no conteúdo analisado. A aplicação permite:
+
+- Importar documentos PDF, TXT e Markdown.
+- Fazer perguntas e conferir as fontes utilizadas nas respostas.
+- Resumir textos longos em etapas, com resumos parciais e síntese final.
+- Selecionar modelos pelo **OpenRouter** conforme a tarefa e sua complexidade, com fallback em caso de falha.
+
+**Público-alvo:** estudantes e equipes acadêmicas que precisam consultar e compreender materiais extensos. **Objetivo:** apoiar a leitura crítica com evidências verificáveis, preservando a responsabilidade humana pela interpretação.
 
 ![Interface do Lume](docs/lume-desktop.png)
 
