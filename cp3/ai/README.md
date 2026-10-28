@@ -15,6 +15,10 @@ O **Lume** é um MVP acadêmico que consulta relatórios, artigos, manuais e out
 
 ![Interface do Lume](docs/lume-desktop.png)
 
+## Demonstração em vídeo
+
+[Gravação da demonstração do Lume (.mov)](docs/demonstracao-lume.mov)
+
 ## Executar
 
 Requisitos: Python 3.11 ou superior. A partir da raiz do repositório, entre na pasta do projeto:
