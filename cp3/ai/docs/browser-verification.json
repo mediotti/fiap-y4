@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "browser": "Chromium",
+  "viewports": [
+    "1440x1100",
+    "390x844"
+  ],
+  "flows": [
+    "example",
+    "qa",
+    "sources",
+    "export",
+    "summary",
+    "history",
+    "abstention",
+    "upload",
+    "delete",
+    "settings",
+    "mobile"
+  ],
+  "console_errors": []
+}

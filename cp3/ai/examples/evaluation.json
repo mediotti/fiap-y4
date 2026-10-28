@@ -1,0 +1,8 @@
+[
+  {"id":"prazo", "question":"Qual é o prazo para solicitar uma bolsa?", "expected_model":"fast", "expected_source":"15 de março de 2026", "task":"qa"},
+  {"id":"valor", "question":"Qual é o valor mensal da bolsa?", "expected_model":"fast", "expected_source":"R$ 700,00", "task":"qa"},
+  {"id":"perspectivas", "question":"Compare as perspectivas da coordenação e dos estudantes sobre a carga horária.", "expected_model":"deep", "expected_source":"oito horas", "task":"qa"},
+  {"id":"fim-do-documento", "question":"Qual é o código exclusivo de conferência do último anexo?", "expected_model":"fast", "expected_source":"JACARANDÁ-482", "task":"qa"},
+  {"id":"sem-evidencia", "question":"Astronomia extraterrestre em Saturno?", "expected_model":null, "expected_source":null, "task":"qa"},
+  {"id":"resumo-integral", "question":"Resuma critérios, prazos e perspectivas para estudantes interessados no programa.", "expected_model":"deep", "expected_source":null, "task":"summary"}
+]

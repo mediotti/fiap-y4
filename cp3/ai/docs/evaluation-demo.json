@@ -1,0 +1,302 @@
+{
+  "mode": "demo",
+  "cases": [
+    {
+      "case": "prazo",
+      "mode": "demo",
+      "route_correct": true,
+      "expected_evidence_in_sources": true,
+      "abstained_without_call": null,
+      "all_chunks_processed": null,
+      "prompts_within_budget": true,
+      "answer": "Trechos relacionados à pergunta:\n\nO prazo para solicitar uma bolsa termina em 15 de março de 2026, às 18h, no horário de Brasília.\n\nO prazo para resposta inicial a uma solicitação de acessibilidade é de três dias úteis.\n\nAuxílio de alimentação e transporte não é automaticamente considerado bolsa de pesquisa; a comissão deve examinar a finalidade de cada benefício antes de indeferir a inscrição.\n\nA bolsa mensal é de R$ 700,00, por até seis meses.\n\nUm indeferimento sem justificativa pode ser objeto de pedido de esclarecimento, que não reabre automaticamente o prazo de inscrição.\n\nRessalva de contexto: a forma de redigir uma solicitação pode refletir diferentes oportunidades de acesso à linguagem acadêmica.\n\nA suspensão pode ocorrer por perda de matrícula, acúmulo incompatível de bolsas ou ausência prolongada sem resposta aos contatos.\n\nSe a pendência puder ser corrigida sem alterar o conteúdo da proposta, haverá prazo de dois dias úteis para regularização.",
+      "limitations": [
+        "Modo demonstrativo: extração local, sem geração por LLM.",
+        "Confira as fontes; a seleção lexical pode omitir informações relevantes."
+      ],
+      "metrics": {
+        "task": "qa",
+        "mode": "demo",
+        "documents": 1,
+        "total_chunks": 45,
+        "selected_chunks": 8,
+        "document_tokens_estimated": 22479,
+        "selected_tokens_estimated": 2846,
+        "calls": 1,
+        "trace": [
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Pergunta factual em um documento: priorizar custo e latência.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 3583,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          }
+        ],
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms": 9,
+        "status": "ok"
+      }
+    },
+    {
+      "case": "valor",
+      "mode": "demo",
+      "route_correct": true,
+      "expected_evidence_in_sources": true,
+      "abstained_without_call": null,
+      "all_chunks_processed": null,
+      "prompts_within_budget": true,
+      "answer": "Trechos relacionados à pergunta:\n\nA bolsa mensal é de R$ 700,00, por até seis meses.\n\nAuxílio de alimentação e transporte não é automaticamente considerado bolsa de pesquisa; a comissão deve examinar a finalidade de cada benefício antes de indeferir a inscrição.\n\nO prazo para solicitar uma bolsa termina em 15 de março de 2026, às 18h, no horário de Brasília.\n\nO projeto tem encontros quinzenais e relatório mensal de até uma página.\n\nLeitura procedimental: O valor declarado está dentro do limite de dois salários mínimos.\n\nO registro AUR-018 foi incluído no lote de treinamento 3, para comparação de decisões de leitura entre integrantes do grupo.\n\nO registro AUR-026 foi incluído no lote de treinamento 4, para comparação de decisões de leitura entre integrantes do grupo.\n\nO registro AUR-041 foi incluído no lote de treinamento 6, para comparação de decisões de leitura entre integrantes do grupo.",
+      "limitations": [
+        "Modo demonstrativo: extração local, sem geração por LLM.",
+        "Confira as fontes; a seleção lexical pode omitir informações relevantes."
+      ],
+      "metrics": {
+        "task": "qa",
+        "mode": "demo",
+        "documents": 1,
+        "total_chunks": 45,
+        "selected_chunks": 8,
+        "document_tokens_estimated": 22479,
+        "selected_tokens_estimated": 3771,
+        "calls": 1,
+        "trace": [
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Pergunta factual em um documento: priorizar custo e latência.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 4515,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          }
+        ],
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms": 8,
+        "status": "ok"
+      }
+    },
+    {
+      "case": "perspectivas",
+      "mode": "demo",
+      "route_correct": true,
+      "expected_evidence_in_sources": true,
+      "abstained_without_call": null,
+      "all_chunks_processed": null,
+      "prompts_within_budget": true,
+      "answer": "Trechos relacionados à pergunta:\n\nEles pedem que a carga horária seja interpretada como dedicação média ao longo do mês, com possibilidade de compensação.\n\nReceber outra bolsa de pesquisa com obrigação de carga horária incompatível impede acumular os benefícios.\n\nPara a coordenação, a exigência de oito horas semanais facilita o acompanhamento e evita que o apoio seja apenas uma transferência sem vínculo com a pesquisa.\n\nEste material é inteiramente fictício, criado para demonstrar leitura crítica, recuperação de informações e análise de perspectivas.\n\nPodem participar estudantes regularmente matriculados, com proposta de pesquisa aprovada por uma pessoa orientadora.\n\nEsse prazo é para acolhimento e encaminhamento; a conclusão de adaptações complexas dependerá de planejamento comunicado ao estudante.\n\nO prazo para solicitar uma bolsa termina em 15 de março de 2026, às 18h, no horário de Brasília.",
+      "limitations": [
+        "Modo demonstrativo: extração local, sem geração por LLM.",
+        "Confira as fontes; a seleção lexical pode omitir informações relevantes."
+      ],
+      "metrics": {
+        "task": "qa",
+        "mode": "demo",
+        "documents": 1,
+        "total_chunks": 45,
+        "selected_chunks": 7,
+        "document_tokens_estimated": 22479,
+        "selected_tokens_estimated": 2124,
+        "calls": 1,
+        "trace": [
+          {
+            "model": "anthropic/claude-sonnet-4.5",
+            "reason": "Análise, pergunta extensa ou múltiplos documentos: maior capacidade.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 2838,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          }
+        ],
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms": 8,
+        "status": "ok"
+      }
+    },
+    {
+      "case": "fim-do-documento",
+      "mode": "demo",
+      "route_correct": true,
+      "expected_evidence_in_sources": true,
+      "abstained_without_call": null,
+      "all_chunks_processed": null,
+      "prompts_within_budget": true,
+      "answer": "Trechos relacionados à pergunta:\n\nO código de conferência do último anexo é JACARANDÁ-482.\n\nO último registro contém uma informação exclusiva para verificar se a recuperação alcança o final do documento.\n\nOs casos do anexo são sintéticos e não contêm dados pessoais.\n\nPara fins de apresentação acadêmica, devem ser utilizados dados sintéticos, como os registros do anexo.\n\nA inscrição pede comprovante de matrícula emitido nos últimos 30 dias, proposta de pesquisa, aceite da orientação e declaração de renda.\n\nO registro AUR-001 foi incluído no lote de treinamento 1, para comparação de decisões de leitura entre integrantes do grupo.",
+      "limitations": [
+        "Modo demonstrativo: extração local, sem geração por LLM.",
+        "Confira as fontes; a seleção lexical pode omitir informações relevantes."
+      ],
+      "metrics": {
+        "task": "qa",
+        "mode": "demo",
+        "documents": 1,
+        "total_chunks": 45,
+        "selected_chunks": 6,
+        "document_tokens_estimated": 22479,
+        "selected_tokens_estimated": 1798,
+        "calls": 1,
+        "trace": [
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Pergunta factual em um documento: priorizar custo e latência.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 2481,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          }
+        ],
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms": 8,
+        "status": "ok"
+      }
+    },
+    {
+      "case": "sem-evidencia",
+      "mode": "demo",
+      "route_correct": true,
+      "expected_evidence_in_sources": null,
+      "abstained_without_call": true,
+      "all_chunks_processed": null,
+      "prompts_within_budget": true,
+      "answer": "Não encontrei trechos relacionados à pergunta nos documentos selecionados.",
+      "limitations": [
+        "A busca é lexical: tente palavras presentes no material.",
+        "Ausência de evidência recuperada não demonstra ausência do fato.",
+        "O modelo não indicou fontes; a resposta não deve ser tratada como fundamentada."
+      ],
+      "metrics": {
+        "task": "qa",
+        "mode": "demo",
+        "documents": 1,
+        "total_chunks": 45,
+        "selected_chunks": 0,
+        "document_tokens_estimated": 22479,
+        "selected_tokens_estimated": 0,
+        "calls": 0,
+        "trace": [],
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms": 7,
+        "status": "ok"
+      }
+    },
+    {
+      "case": "resumo-integral",
+      "mode": "demo",
+      "route_correct": true,
+      "expected_evidence_in_sources": null,
+      "abstained_without_call": null,
+      "all_chunks_processed": true,
+      "prompts_within_budget": true,
+      "answer": "Excertos para uma síntese:\n\nEsse prazo é para acolhimento e encaminhamento; a conclusão de adaptações complexas dependerá de planejamento comunicado ao estudante.\n\nAntes da suspensão definitiva, o estudante recebe aviso e prazo de cinco dias úteis para esclarecimento.\n\nDeve indicar o critério e a evidência, dentro do prazo publicado.\n\nLeitura procedimental: O comprovante atende ao prazo de emissão de até 30 dias.\n\nSituação fictícia: O registro de atividades de abril foi enviado dentro do prazo e validado pela orientação.\n\nA justificativa da decisão deve ser curta, compreensível e ligada ao critério publicado.\n\nA justificativa da decisão deve ser curta, compreensível e ligada ao critério\n\nOs demais critérios precisam de avaliação própria.\n\nLeitura procedimental: O comprovante atende ao prazo\n\nO registro AUR-047 foi incluído no lote de treinamento 6, para comparação de decisões de leitura entre integrantes do grupo.",
+      "limitations": [
+        "Modo demonstrativo: extração local, sem geração por LLM.",
+        "Confira as fontes; a seleção lexical pode omitir informações relevantes."
+      ],
+      "metrics": {
+        "task": "summary",
+        "mode": "demo",
+        "documents": 1,
+        "total_chunks": 45,
+        "selected_chunks": 45,
+        "document_tokens_estimated": 22479,
+        "selected_tokens_estimated": 22479,
+        "calls": 6,
+        "trace": [
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Resumo parcial: extração e compressão com modelo econômico.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 5539,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          },
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Resumo parcial: extração e compressão com modelo econômico.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 5102,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          },
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Resumo parcial: extração e compressão com modelo econômico.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 5108,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          },
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Resumo parcial: extração e compressão com modelo econômico.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 5739,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          },
+          {
+            "model": "google/gemini-2.5-flash",
+            "reason": "Resumo parcial: extração e compressão com modelo econômico.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 5013,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          },
+          {
+            "model": "anthropic/claude-sonnet-4.5",
+            "reason": "Síntese global: integrar seções e preservar ressalvas.",
+            "mode": "demo",
+            "status": "simulated",
+            "estimated_input_tokens": 2317,
+            "input_tokens": null,
+            "output_tokens": null,
+            "cost_usd": null,
+            "latency_ms": 0
+          }
+        ],
+        "input_tokens": null,
+        "output_tokens": null,
+        "cost_usd": null,
+        "latency_ms": 11,
+        "status": "ok"
+      }
+    }
+  ],
+  "note": "A extração local não avalia qualidade de LLM. Fonte recuperada não prova fidelidade semântica. Use a rubrica humana de docs/avaliacao.md para avaliar as respostas reais."
+}

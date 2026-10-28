@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183f39">
+  <title>Lume — clareza para o seu conhecimento</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23183f39'/%3E%3Cpath d='M20 7v26M7 20h26M11 11l18 18M11 29l18-18' stroke='%23d7ef9a' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Biblioteca de documentos">
+      <a class="brand" href="/" aria-label="Lume, início"><span class="brand-mark">✳</span> lume<span class="brand-dot">.</span></a>
+      <p class="brand-caption">MENOS RUÍDO. MAIS CLAREZA.</p>
+      <div class="workspace"><span class="workspace-icon">A</span><div>Meu espaço de pesquisa<small>PROJETO ACADÊMICO</small></div></div>
+      <div class="library-heading"><h2>Biblioteca</h2><span id="doc-count" class="count">0</span></div>
+      <label class="upload-button"><span aria-hidden="true">＋</span> Adicionar documento<input id="upload" type="file" accept=".pdf,.txt,.md" multiple></label>
+      <p class="file-hint">PDF, TXT ou Markdown · até 2 MB</p>
+      <div id="documents" class="documents"></div>
+      <div id="library-empty" class="library-empty"><span aria-hidden="true">▤</span><p>Sua próxima descoberta<br>começa com um documento.</p></div>
+      <div class="sidebar-bottom"><div class="local-note"><span class="status-dot"></span> Biblioteca salva neste servidor</div><button id="settings-button" class="plain-button">⚙ <span>Configuração do projeto</span><span>↗</span></button></div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar"><div><span class="breadcrumb">Meu espaço</span><span class="slash">/</span><strong>Assistente de documentos</strong></div><div class="topbar-right"><span id="mode-badge" class="mode-badge">Conectando…</span><span class="avatar" title="Espaço acadêmico">A</span></div></header>
+      <main>
+        <div class="page-heading"><div><p class="eyebrow">SEU MATERIAL, COM NOVAS PERSPECTIVAS</p><h1>Da informação à compreensão<span>.</span></h1><p>Converse com seus documentos. Conecte ideias. Confira as fontes.</p></div><button id="history-button" class="outline-button"><span aria-hidden="true">◷</span> Atividade</button></div>
+        <div class="content-grid">
+          <section class="analysis-column" aria-label="Análise de documentos">
+            <div class="task-tabs" role="tablist" aria-label="Tipo de análise"><button class="task-tab active" id="tab-qa" role="tab" aria-selected="true" data-task="qa"><span aria-hidden="true">◌</span> Perguntar ao material</button><button class="task-tab" id="tab-summary" role="tab" aria-selected="false" data-task="summary"><span aria-hidden="true">≡</span> Resumir documento</button></div>
+            <section class="question-card" role="tabpanel" aria-labelledby="tab-qa" id="task-panel">
+              <div class="card-label"><span class="tiny-spark" aria-hidden="true">✳</span><h2 id="question-label">O que você quer descobrir?</h2><span id="selection-label" class="selection-label">Nenhum documento selecionado</span></div>
+              <form id="analyze-form"><label class="sr-only" for="question">Pergunta ou objetivo do resumo</label><textarea id="question" maxlength="2000" rows="4" placeholder="Ex.: Quais são os prazos e critérios para solicitar uma bolsa?"></textarea><div class="composer-footer"><span id="composer-hint">Respostas baseadas nos documentos selecionados</span><button id="submit-button" class="primary-button" type="submit">Encontrar resposta <span aria-hidden="true">↗</span></button></div></form>
+            </section>
+            <div id="suggestions" class="suggestions"><span>Experimente</span><button data-prompt="Qual é o prazo para solicitar uma bolsa?">Encontrar uma informação ↗</button><button data-prompt="Compare as perspectivas da coordenação e dos estudantes sobre as bolsas.">Comparar perspectivas ↗</button></div>
+
+            <section id="welcome" class="welcome-card"><div class="welcome-art" aria-hidden="true"><div class="art-orbit"></div><div class="art-paper paper-back"><i></i><i></i><i></i></div><div class="art-paper paper-front"><span>✳</span><i></i><i></i><i></i><b>Uma ideia mais clara.</b></div><span class="art-star">✧</span></div><p class="eyebrow">UM PONTO DE PARTIDA</p><h2>Conhecimento espalhado.<br>Ideias conectadas.</h2><p>Adicione seu material à biblioteca ou explore um exemplo.<br>O Lume encontra trechos relevantes e mostra de onde veio cada resposta.</p><button id="demo-button" class="demo-button">Explorar documento de exemplo <span aria-hidden="true">→</span></button><span class="demo-caption">Manual fictício de um programa de bolsas · sem cadastro</span></section>
+            <section id="loading" class="loading-card" hidden aria-live="polite"><span class="spinner"></span><div><h2 id="loading-title">Consultando o material…</h2><p id="loading-description">Buscando informações e preparando as fontes.</p></div></section>
+            <section id="result" class="result-card" hidden aria-live="polite"></section>
+            <section id="history" class="history-card" hidden><div class="section-heading"><h2>Atividade recente</h2><button id="close-history" class="plain-button">Fechar ×</button></div><p>Últimas 30 execuções. Apenas métricas são armazenadas neste histórico.</p><div id="history-list"></div></section>
+            <p class="critical-note"><span aria-hidden="true">ⓘ</span> A IA pode omitir informações ou interpretar algo incorretamente. Leia as fontes antes de concluir.</p>
+          </section>
+
+          <aside class="insight-column" aria-label="Como a análise funciona">
+            <section class="insight-card"><div class="insight-header"><span class="tiny-spark" aria-hidden="true">✳</span><h2>Por trás da resposta</h2></div><p>Um caminho mais inteligente para entender o seu material.</p><ol class="process-list"><li><span class="step-number">01</span><div><h3>O contexto certo</h3><p>Documentos divididos em trechos. Na consulta, entram os mais relevantes.</p></div></li><li><span class="step-number">02</span><div><h3>O modelo adequado</h3><p>Perguntas factuais e análises seguem caminhos diferentes.</p></div></li><li><span class="step-number">03</span><div><h3>Fontes à vista</h3><p>Confira os trechos usados e forme a sua própria leitura.</p></div></li></ol><div class="pipeline-label"><span class="status-dot"></span> Roteamento explícito · OpenRouter</div></section>
+            <section id="context-card" class="context-card"><p class="eyebrow">JANELA DE CONTEXTO</p><div class="context-stat"><strong id="context-budget">6.000</strong><span>tokens de entrada<br>por chamada</span></div><div class="context-bar"><i></i><i></i><i></i><i class="faded"></i><i class="faded"></i></div><p>Selecionar antes de enviar.<br>Resumir em etapas para preservar o todo.</p></section>
+            <div class="quote-note"><span>“</span><p>Uma boa resposta é o começo<br>de uma leitura mais crítica.</p></div>
+          </aside>
+        </div>
+        <footer><span>LUME / LABORATÓRIO DE IDEIAS</span><span>Engenharia de prompts · Contexto longo · Roteamento de IA</span></footer>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="source-dialog"><div class="dialog-header"><h2 id="source-title">Fonte</h2><button id="close-source" class="icon-button" aria-label="Fechar fonte">×</button></div><p id="source-meta" class="muted"></p><pre id="source-text"></pre></dialog>
+  <dialog id="settings-dialog"><div class="dialog-header"><h2>Configuração do projeto</h2><button id="close-settings" class="icon-button" aria-label="Fechar configuração">×</button></div><p id="mode-description"></p><p>Para usar os modelos reais, configure <code>OPENROUTER_API_KEY</code> no arquivo <code>.env</code> do servidor e reinicie a aplicação. A chave fica no servidor.</p><div id="model-list"></div><p class="muted">O modo demonstração faz extração local e simula a decisão de roteamento. Nenhuma chamada a LLM é feita. IDs e limites dos modelos são configuráveis no servidor.</p></dialog>
+</body>
+</html>
